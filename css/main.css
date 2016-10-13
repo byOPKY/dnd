@@ -1,0 +1,134 @@
+body{
+	background-image: url("../img/car60.png");
+	background-size: 100%;
+	background-repeat: repeat-x;
+	font-family: Verdana;
+	font-size: 14px;
+}
+.width{
+	max-width: 100%;
+}
+.nav{
+	background-color:#BEF992;
+	padding: 1%;
+	position: fixed;
+	width: 100%;
+}
+.bloqueDos{
+	white-space: nowrap;
+	display: inline-block;
+}
+
+.border{
+	border-radius: 5px;
+}
+
+.agregar{
+	background-color:  #3C121C;
+	padding:3%;
+	color: white;
+	opacity: 0.6;
+	margin: 5%;
+}
+.escribir{
+	padding:2%;
+	max-width: 100%;
+}
+.boton{
+	padding: 2% 3%;
+	color: #3C121C;
+	background-color:#BEF992;
+	display: block;
+}
+.aBoton{
+	padding: 2% 3%;
+	color: #3C121C;
+	background-color:#5FB9B0;
+	display: block;
+}
+.none{
+	background-color:  #5FB9B0;
+	margin: auto;
+	margin: 5%;
+	padding: 3%;
+	
+}
+.no{
+	display: none;
+}
+.si{
+	display: block;
+}
+.primer{
+	width: 20%;
+	float: left;
+}
+.primero{
+	width: 225px;
+	display: inline-block;
+	vertical-align: top;
+	
+}
+
+.pt-130 {
+	padding-top: 130px;
+}
+
+.cuadro{
+	margin: 10px;
+	padding: 12px;
+	background-color:  #5FB9B0; 
+	display: inline-block;
+}
+.cuadro2{
+	margin: 10px;
+	padding: 10px;
+	background-color: #BEF992;
+	height: 100%;
+		
+}
+.cuadro3{
+	background-color: #F2F5A9;
+	padding: 2%;
+	border-radius: 5px;
+	margin: 5% 2%;
+}
+a{
+	padding: 10px;
+}
+.titulo{
+	padding: 10px;
+	font-weight: bolder;
+}
+.textos{
+	font-weight: bold;
+	font-style: italic;
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(9,0,4,0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+/*
+#5FB9B0  #413D65
+*/
+.over {
+  border: 1px dashed #413D65;
+
+}
+.mover{
+	background-color: #BEF992;
+	opacity: 0.7;
+
+}
+.arrastra{
+	transform:rotate(15deg);
+}
