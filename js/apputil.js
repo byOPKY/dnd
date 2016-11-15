@@ -27,11 +27,18 @@ function cargaPagina(){
 			none.classList.remove("si");
 			none.classList.add("no"); 
 	});
-	boton.addEventListener("click", clickAndClick);
+
+	boton.addEventListener("click", clickAndClick)
 };
 
 function clickAndClick (e){
 		e.preventDefault();
+
+		var regexNombre = /^[a-zñáéíóúü]+$/gi;
+	if (escribir.value.trim().length == 0 ||!regexNombre.test(escribir.value)){
+			alert("Ingresa algún dato");
+		}
+		else{
 		var contenedor = document.getElementById("contenedor");
 		var cuadro= document.createElement("div");
 		cuadro.classList.add("cuadro", "primero", "border");
@@ -50,14 +57,15 @@ function clickAndClick (e){
 		input.appendChild(link);
 
 		input.addEventListener("click" , agregarCuadro);
-
+	}
+		
 		function agregarCuadro(){
 		var cuadro2= document.createElement("div");
 		cuadro2.classList.add("cuadro2", "border");
 		cuadro.appendChild(cuadro2);
 		input.classList.add("no")
 		var aText = document.createElement("textarea")
-		cuadro2.insertBefore(aText, cuadro2.childNodes[0]);
+		cuadro2.insertBefore(aText, cuadro2.lastChil);
 			
 		var aBoton = document.createElement("button");
 		aBoton.classList.add("aBoton", "border")
@@ -71,6 +79,11 @@ function clickAndClick (e){
 
 		function agregarTarjetas (){
 		
+			var regexTarjeta = /^[a-zñáéíóúü]+$/gi;
+	if (aText.value.trim().length == 0 ||!regexTarjeta.test(aText.value)){
+			alert("Ingresa algún dato");
+		}
+		else{
 		var context = aText.value;
 		var textContext=document.createElement("div");
 		textContext.innerHTML = context;
@@ -119,13 +132,13 @@ function clickAndClick (e){
 
 		function terminaArrastrar(e) {
 			this.classList.remove("over", "mover");
-			this.classList.add("animated", "rubberBand");
+			this.parentElement.classList.add("animated", "rubberBand");
 		}
-
+	}
 
 		function desaparecer(){
 		input.classList.add("si");
-		cuadro2.classList.add("no");
+		cuadro2.remove();
 		};
 	};
 };
